@@ -10,6 +10,3 @@ if flag==1:
     print("Number is not prime")
 else:
     print("Number is prime")
-
-
-
