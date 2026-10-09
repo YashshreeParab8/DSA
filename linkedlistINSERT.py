@@ -1,4 +1,4 @@
-# singly linear linked list 
+# singly linear linked list insertion
 class Node :
   def  __init__(self,value):
     self.data = value
@@ -17,6 +17,19 @@ class SLL :
         temp = temp.next
       temp.next = new_node
 
+  def insert(self,new_node,pos):
+    if pos == 1: #to insert node at first position
+      new_node.next = self.head
+      self.head = new_node
+    else: #to insert node from 2nd to last position
+      p=1
+      temp = self.head
+      while(p!=pos-1):
+        temp = temp.next
+        p+=1
+      new_node.next = temp.next
+      temp.next = new_node
+
   def print(self):
     temp = self.head
     while(temp):
@@ -31,4 +44,6 @@ list1.append(n1)
 list1.append(n2)
 list1.append(Node(30))
 list1.append(Node(40))
+list1.print()
+list1.insert(Node(34),1)
 list1.print()
