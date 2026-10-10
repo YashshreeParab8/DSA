@@ -30,6 +30,7 @@ class SLL :
       new_node.next = temp.next
       temp.next = new_node
 
+
   def print(self):
     temp = self.head
     while(temp):

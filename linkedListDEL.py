@@ -1,4 +1,5 @@
 #singly linked list deletion
+# singly linear linked list 
 class Node :
   def  __init__(self,value):
     self.data = value
@@ -31,20 +32,20 @@ class SLL :
       temp.next = new_node
 
   def delete(self, value):
-      temp=self.head
-      prev=None
-      if temp.data==value:
-        self.head=self.head.next
-      else:
-        while(temp.data!=value and temp!=None):
-          prev=temp
-          temp=temp.next
-          if temp==None:
-            print("value is not present in the list")
-            return
-        prev.next=temp.next
-        temp=None
-
+        temp=self.head
+        prev=None
+        if temp.data==value:
+          self.head=self.head.next
+        else:
+          while(temp.data!=value and temp!=None):
+            prev=temp
+            temp=temp.next
+            if temp==None:
+              print("value is not present in the list")
+              return
+          prev.next=temp.next
+          temp=None
+  
   def print(self):
     temp = self.head
     while(temp):
