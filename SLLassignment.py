@@ -105,7 +105,7 @@ list1.print()
  
 print()
 list1.find_middle()
- 
+
 list1.delete(30)
 print("\nAfter delete:")
 list1.print()
