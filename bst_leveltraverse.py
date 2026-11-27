@@ -10,7 +10,7 @@ class BST:
     
     def __init__(self):
         self.root = None
-        self.cnt = 0        
+        self.cnt = 0         
 
     def insert(self, new_node):
         if self.root is None:
@@ -43,15 +43,21 @@ class BST:
             print("bst is empty")
         arr=[]
         cnt=0
+        level=0
         arr.append(rt)
         while(cnt<len(arr)):
-            temp=arr[cnt]
-            cnt+=1
-            print(temp.data, end=" ")
-            if temp.left:
-                arr.append(temp.left)
-            if temp.right:
-                arr.append(temp.right)
+            node_count=len(arr)-cnt    #level wise node count
+            print("\nlevel no",level,":",end=" ")
+            for i in range(node_count):
+                temp=arr[cnt]
+                cnt+=1
+                print(temp.data, end=" ")
+                if temp.left:
+                    arr.append(temp.left)
+                if temp.right:
+                    arr.append(temp.right)
+            level+=1
+        print("\nheight of tree:",level)
                 
 
 # --- Driver Code ---
@@ -64,3 +70,4 @@ b1.inorder(b1.root)
 
 print("\nlevel order:")
 b1.level_order(b1.root)
+
